@@ -7,12 +7,74 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <nav>
-        <div class="div"></div>
-        <div class="div"></div>
-        <div class="div"></div>
-        <div class="div"></div>
-        <div class="div"></div>
+    <nav class="bg-deepBlue">
+        <!-- // margin: 0 auto is written as mx-auto in tailwind  -->
+        <div class="w-[1080px] mx-auto flex items-center justify-between">
+
+            <!-- //razorpay logo  -->
+            <a href="/" class="cursor-pointer py-7 pr-7">
+                <img src="./images/logo.svg" alt="error" width="125px" height="30px" >
+            </a>
+
+            <!-- the unorderlist contains payments,banking,payroll,support,resources etc  -->
+            <ul class="flex gap-6">
+                <!-- VVI -> explaination of group class  -->
+
+                <!-- see in the website carefully on hovering over the list item (li) we get a underline below it , so basically a list irem contains a link <a> Payemnts </a> and a div below it for underline  -->
+                <!-- Now on hovering over the <li> which is  parent , we get to see the underline <div> (which is child of <li>) , therefore  -->
+                    <!-- When you need to style an element based on the state of the parent element(<li>), mark the parent with the group class, and use group-hover to style the target/child element <div> underline  -->
+                    
+                <!-- Now the underline div is placed at the very bottom of the <li>, therefore make <li> as relative and div underline as absolute and then bottom 0(means bottom 0px of the parent container which is <li>)    -->
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 group">
+                    <a href="#">Payments</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-300"></div>
+                </li>
+                
+                <!-- simply copy paste the same for rest banking, resources ,payroll etc -->
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 group">
+                    <a href="#">Banking</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-300"></div>
+                </li>
+                
+                <!-- see Corporate and payroll dont have underline below it so simply remove the div of the underline  -->
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 ">
+                    <a href="#">Corporate Card</a>
+                </li>
+
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 ">
+                    <a href="#">Payroll</a>
+                </li>
+
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 group">
+                    <a href="#">Resources</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-300"></div>
+                </li>
+
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 group">
+                    <a href="#">Support</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-300"></div>
+                </li>
+
+                <li class="relative text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-300 group">
+                    <a href="#">Pricing</a>
+                    <div class="absolute bottom-0 w-full h-1 bg-lightBlue hidden group-hover:block transition-all duration-300"></div>
+                </li>
+
+            </ul>
+
+            <div class="flex gap-6">
+                <img src="./images/india-flag.svg" alt="error" width="28px" height="28px">
+                
+                <button class="text-white bg-deepBlue font-mullish border-lightBlue border rounded-sm py-3 px-5 text-sm font-bold">Log in</button>
+
+                <button class="py-3 px-4 font-mullish font-bold bg-white text-lightBlue border-lightBlue border-2 rounded-sm hover:text-lightBlue500">Sign Up <i class="fa-solid fa-arrow-right text-lightBlue"></i> </button>
+
+            </div>
+
+        </div>
     </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 </body>
 </html>
