@@ -115,6 +115,7 @@
 
      <section class="relative mt-48 overflow-y-hidden">
         <!-- this section has one image(dotted image) in the left , one  more dotted image in the right and one main content in the middle . In the middle part , first it has a heading and then a green dash under it . and it has one more left container with a background image -->
+         <!-- these image is overlapping/floating in the feature section so make it absolute and set left right top etc  -->
         <img src="./images/feature-section1-dottedrows.png" alt="error" loading="lazy" width="233" height="167"
             class="absolute -top-[8rem] left-[10rem]">
         <img src="./images/feature-section1-dottedrows.png" alt="error" loading="lazy" width="233" height="167"
@@ -168,6 +169,7 @@
                         </div>     
                     </div>
 
+                    <!-- this image is overlapping/floating in the content section so make it absolute and set left right top etc  -->
                     <div class="absolute right-0 bottom-0 w-[550px] ">
                         <img src="./images/payment-suite.png" alt="error" class="w-full object-fill">
                     </div>
@@ -175,6 +177,280 @@
 
             </div>
         </div>
+
+        <!-- 6 cards div under the feature section  -->
+         <div class="w-[1040px] mx-auto flex flex-wrap gap-5 pt-14">
+            
+            <!-- //Box - 1  -->
+             <!-- here see in each box , the difficult part is the border which is cut from top right but actually it is not border , it is simply a svg image copy pasted  -->
+              <!-- then the box has a small image at top right and then the content part  -->
+            <div class="relative w-[32%] cursor-pointer">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+
      </section>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
