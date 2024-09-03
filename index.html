@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razorpay</title>
     <link rel="stylesheet" href="./main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body class="overflow-x-hidden">
+<body class="w-[100%] overflow-x-hidden">
 
     <!-- / - - - - - / -->
     <!-- Navbar  -->
@@ -70,7 +71,7 @@
                 
                 <button class="text-white bg-deepBlue font-mullish border-lightBlue border rounded-sm py-3 px-5 text-sm font-bold">Log in</button>
 
-                <button class="py-3 px-4 font-mullish font-bold bg-white text-lightBlue border-lightBlue border-2 rounded-sm hover:text-lightBlue500">Sign Up <i class="fa-solid fa-arrow-right text-lightBlue"></i> </button>
+                <button class="py-3 px-4 font-mullish font-bold bg-white text-lightBlue border-lightBlue border-2 rounded-sm hover:text-lightBlue500">Sign Up <i class="fa fa-thin fa-arrow-right text-lightBlue"></i> </button>
 
             </div>
 
@@ -96,7 +97,8 @@
             </div>
 
             <!-- right part -->
-            <img src="./images/hero-illustration.jpg" alt="error" class="w-[680px]">
+             <!-- loading="lazy" hover on lazy (vs code pe hi cursor hobver karke dekho) and will get full detail  -->
+            <img src="./images/hero-illustration.jpg" alt="error" loading="lazy" class="w-[680px]">
         </div>
 
         <!-- bottom triangular part  -->
@@ -107,7 +109,74 @@
          </div>
 
      </section>
-     
+
+     <!-- / - - - - - / -->
+     <!-- Features section  -->
+
+     <section class="relative mt-48 overflow-y-hidden">
+        <!-- this section has one image(dotted image) in the left , one  more dotted image in the right and one main content in the middle . In the middle part , first it has a heading and then a green dash under it . and it has one more left container with a background image -->
+        <img src="./images/feature-section1-dottedrows.png" alt="error" loading="lazy" width="233" height="167"
+            class="absolute -top-[8rem] left-[10rem]">
+        <img src="./images/feature-section1-dottedrows.png" alt="error" loading="lazy" width="233" height="167"
+            class="absolute top-[3rem] right-0 rotate-180">
+
+        <div class="relative w-[1040px] mx-auto pt-4">
+            <!-- --heading--  -->
+            <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold">Accept Payments with Razorpay Payment Suite</h2>
+            <div class="w-6 h-1 bg-greenLight mx-auto mt-3 mb-6"></div>
+
+            <!-- content box  -->
+            <div class="relative w-[100%] flex rounded-md p-10 py-12 overflow-y-hidden border rounded-md"> 
+                <!-- left section  -->
+                <div class="flex flex-col w-[50%] gap-10">
+                    <h3 class="font-mullish text-[28px] leading-10 font-bold ">Supercharge your business with the all‑powerful
+                        <span class="text-lightBlue">Payment Gateway</span></h3>
+                    
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span>100+ Payment Methods</span>
+                        </li>
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span> Industry Leading Success Rate </span>
+                        </li>
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span> Superior Checkout Experience </span>
+                        </li>
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span> Easy to Integrate </span>
+                        </li>
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span> Instant Settlements from day 1 </span>
+                        </li>
+                        <li class="flex items-center font-mullish gap-2">
+                            <i class="fa fa-sharp fa-thin fa-check"></i>
+                            <span> In-depth Reporting and Insights </span>
+                        </li>
+                    </ul>
+
+                    <!-- for button and hyperlink  -->
+                    <div class="flex items-center gap-4">
+                        <button class="bg-lightBlue  text-white p-4 rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500">Sign Up Now</button>
+                        <div class="flex items-center">
+                            <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                            <i class="fa fa-solid fa-greater-than w-5 h-4 text-lightBlue"></i>
+                        </div>     
+                    </div>
+
+                    <div class="absolute right-0 bottom-0 w-[550px] ">
+                        <img src="./images/payment-suite.png" alt="error" class="w-full object-fill">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 </body>
