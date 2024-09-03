@@ -6,7 +6,7 @@
     <title>Razorpay</title>
     <link rel="stylesheet" href="./main.css">
 </head>
-<body>
+<body class="overflow-x-hidden">
 
     <!-- / - - - - - / -->
     <!-- Navbar  -->
@@ -77,11 +77,37 @@
         </div>
     </nav>
 
-    / - - - - - /
+    <!-- / - - - - - / -->
     <!-- Hero Section  -->
-     <div>
+     <!-- made section relative , since the bottom triangular part needs to be positioned left 0 right 0 according to its parent (section ) , therefore made section as relative and the bottom triangular part as absolute  -->
+     <section class="relative bg-deepBlue ">
         
-     </div>
+        <!-- We can write w- 83% as w-10/12 also, 
+        see we want width of this div around 83% , so to write 83% in tailwind do w:10/12 , since 10/12 = 83%  -->
+        <div class="w-[75%] flex flex-row mx-auto justify-evenly items-center pt-3">
+            
+            <!-- left part  -->
+            <div class="flex flex-col gap-6 w-[33%]">
+                <h1 class="font-mullish font-bold text-4xl text-white">Power your finance, grow your business</h1>
+                <div class="w-6 h-1 bg-greenLight"></div>
+                <p class="font-mullish text-[18px] leading-7 text-white opacity-70">Accept payments from customers. Automate payouts to vendors &
+                    employees. Never run out of working capital.</p>
+                <button class="bg-lightBlue text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500 p-3 w-[40%]">Sign Up Now</button>
+            </div>
+
+            <!-- right part -->
+            <img src="./images/hero-illustration.jpg" alt="error" class="w-[680px]">
+        </div>
+
+        <!-- bottom triangular part  -->
+         <!-- since we want to position this triangle shape just below the above div part , therefore position this img as absolute  -->
+          <!-- took width as 101% since 100% se image pure full screen cover nhi kar raha tha , thora sa pixel bach ja raha tha on 100% -->
+         <div class="absolute left-0 right-0 w-[101%]">
+            <img src="./images/hero-shape.svg" alt="error" class="w-full object-fill">
+         </div>
+
+     </section>
+     
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 </body>
