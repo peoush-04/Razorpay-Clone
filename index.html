@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<!-- since in the hero section the lower bottom triangular part is taking 101% therefore we r getting scroll in x-axis also, so to stop it we do overflow-x-hidden  -->
 <body class="w-[100%] overflow-x-hidden">
 
     <!-- / - - - - - / -->
@@ -111,8 +112,7 @@
      </section>
 
      <!-- / - - - - - / -->
-     <!-- Features section  -->
-
+     <!-- Features section  1-->
      <section class="relative mt-48 overflow-y-hidden">
         <!-- this section has one image(dotted image) in the left , one  more dotted image in the right and one main content in the middle . In the middle part , first it has a heading and then a green dash under it . and it has one more left container with a background image -->
          <!-- these image is overlapping/floating in the feature section so make it absolute and set left right top etc  -->
@@ -184,7 +184,52 @@
             <!-- //Box - 1  -->
              <!-- here see in each box , the difficult part is the border which is cut from top right but actually it is not border , it is simply a svg image copy pasted  -->
               <!-- then the box has a small image at top right and then the content part  -->
-            <div class="relative w-[32%] cursor-pointer">
+            <div class="relative w-[32%] cursor-pointer ">
+                <!-- image present at top right corner  -->
+                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+
+                <!-- for the border like part which is cut from top right  -->
+                <svg
+                        viewBox="0 0 349.32501220703125 225"
+                        xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none"
+                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200 "
+                        style="stroke-opacity: 0.15"
+                         >
+                  <path
+                        d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z"
+                        fill="#fff"
+                  ></path>
+                </svg>
+
+                <!-- // for the content part of the card  -->
+                <div class="flex flex-col p-7 gap-4 ">
+                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
+                        Payment Links
+                    </h3>
+
+                    <p class="font-mullish text-grayText mt-6 z-50">
+                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+
+                    <!-- //know more wala part le liye container div  -->
+                    <div class="z-50 pt-7">
+                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-[32%] cursor-pointer ">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -273,6 +318,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="relative w-[32%] cursor-pointer ">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
@@ -317,6 +363,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="relative w-[32%] cursor-pointer ">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
@@ -361,50 +408,7 @@
                     </div>
                 </div>
             </div>
-            <div class="relative w-[32%] cursor-pointer ">
-                <!-- image present at top right corner  -->
-                <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
-                <!-- for the border like part which is cut from top right  -->
-                <svg
-                        viewBox="0 0 349.32501220703125 225"
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                        class="stroke-1 stroke-[#818597] h-full w-full absolute z-10 transition-all duration-200"
-                        style="stroke-opacity: 0.15"
-                         >
-                  <path
-                        d="m 0 6 
-                    a 6 6 0 0 1 6 -6 
-                    h 250.32501220703125 
-                    a 16 16 0 0 1 11 5 
-                    l 77 77 
-                    a 16 16 0 0 1 5 11 
-                    v 126 
-                    a 6 6 0 0 1 -6 6 
-                    h -337.32501220703125 
-                    a 6 6 0 0 1 -6 -6 
-                    z"
-                        fill="#fff"
-                  ></path>
-                </svg>
-
-                <!-- // for the content part of the card  -->
-                <div class="flex flex-col p-7 gap-4">
-                    <h3 class="font-mullish font-bold text-deepBlueHead leading-5 text-[1.375rem] z-50">
-                        Payment Links
-                    </h3>
-
-                    <p class="font-mullish text-grayText mt-6 z-50">
-                        Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
-                    </p>
-
-                    <!-- //know more wala part le liye container div  -->
-                    <div class="z-50 pt-7">
-                        <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
-                    </div>
-                </div>
-            </div>
             <div class="relative w-[32%] cursor-pointer ">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
@@ -453,6 +457,268 @@
 
      </section>
 
+
+     <!-- Feature section 2  -->
+      <!-- see this section first has a big background image with curvy zigzag lines at bottom  -->
+      <section class="bg-[url(./images/feature-section-2BG.svg)] bg-no-repeat bg-cover pt-[15rem] pb-[501px] mt-16 ">
+        <!-- this div contains all the three boxes  -->
+         <!-- required this div since we want a width of 1040px for all the three boxes below  -->
+        <div class="w-[1040px] mx-auto relative pt-4 flex flex-col">
+            
+            <!-- //box1 - business banking detail box  -->
+            <div class="relative w-full">
+                <!-- heading  -->
+                <h2 class="font-mullish text-center text-2xl leading-[1.2] text-white font-bold">Explore Razorpay Business Banking</h2>
+                <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-10"></div>
+
+                <img src="./images/x-flame-1.png" alt="" loading="lazy" class="absolute -top-[42px] -left-[130px] w-[180px] z-[1]">
+                <img src="./images/x-flame-2.png" alt="" loading="lazy" class="absolute top-[215px] -right-[210px] w-[250px] z-[1]">
+                
+                <!-- content box  -->
+                <div class="relative w-[100%] flex rounded-md p-10 py-12 overflow-y-hidden border border-slate-700 z-[10] bg-[#181c2e]"> 
+                    <!-- left section  -->
+                    <div class="flex flex-col w-[52%] gap-14">
+                        <h3 class="font-mullish text-[28px] leading-10 font-bold text-white">Manage your company’s finances with 
+                            <img src="./images/razorpayX.svg" alt="error" loading="lazy" width="168px" height="32px" class="inline">
+                            <span class="text-greenLight">Business Banking</span></h3>
+                        
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center font-mullish gap-2">
+                                <i class="fa fa-sharp fa-thin fa-check text-greenLight"></i>
+                                <span class="text-white">Open a fully digital current account</span>
+                            </li>
+                            <li class="flex items-center font-mullish gap-2">
+                                <i class="fa fa-sharp fa-thin fa-check text-greenLight"></i>
+                                <span class="text-white"> Automate payables & compliment payments </span>
+                            </li>
+                            <li class="flex items-center font-mullish gap-2">
+                                <i class="fa fa-sharp fa-thin fa-check text-greenLight"></i>
+                                <span class="text-white"> Simplify and track spends with Corporate cards </span>
+                            </li>
+                            <li class="flex items-center font-mullish gap-2">
+                                <i class="fa fa-sharp fa-thin fa-check text-greenLight"></i>
+                                <span class="text-white">View financial insights at a glance</span>
+                            </li>
+                        </ul>
+    
+                        <!-- for button and hyperlink  -->
+                        <div class="flex items-center gap-4">
+                            <!-- button  -->
+                            <button
+                            class="relative bg-lightBlue flex items-center 
+                            justify-start text-white py-[14px] px-[18px] md:pr-[90px] rounded-md
+                             font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
+                                Sign Up
+
+                                <!-- // to get the green effect in sign up button , the green effect is nothing but a div with bg color green and skewed to some degree  -->
+                                <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] 
+                                flex justify-center items-center">
+
+                                    <!--arrow-->
+                                        <!-- see now inside the skewed green div we have an arrow , when we put the svg of the arrow , the arrow will also get skewed by the same degree as the above div got skewed(+20 deg) . therefore to make the arrow normal , skew the arrow in opposite direction ,i.e., -20deg  -->
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    focusable="false"
+                                    class="w-[20px] h-[20px] -skew-x-[20deg] "
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                            </button>
+                            <!-- //hyperlink  -->
+                            <div class="flex items-center">
+                                <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-lightBlue300 transition-all duration-500">Know More</a>
+                                <i class="fa fa-solid fa-greater-than w-5 h-4 text-lightBlue"></i>
+                            </div>     
+                        </div>
+    
+                        <!-- this image is overlapping/floating in the content section so make it absolute and set left right top etc  -->
+                        <div class="absolute right-0 bottom-0 w-[550px] ">
+                            <img src="./images/buisness-banking.png" alt="error" class="w-full object-fill">
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!-- //box2 - 3cards  -->
+             <div class="mx-auto flex flex-wrap gap-5 pt-14">
+
+                <!-- // card - 1 -->
+                <div class="relative w-[32%] cursor-pointer ">
+                    <!-- image present at top right corner  -->
+                    <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+    
+                    <!-- for the border like part which is cut from top right  -->
+                    <svg
+                            viewBox="0 0 349.32501220703125 225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none"
+                            class="stroke-1 stroke-[#818597] h-full w-full absolute transition-all duration-200 "
+                            style="stroke-opacity: 0.60" 
+                             >
+                        <!-- Note : to fill/change the bg color of the card , then in the <path> tag u have fill option , therefore put the required color in fill=""   -->
+                      <path
+                            d="m 0 6 
+                        a 6 6 0 0 1 6 -6 
+                        h 250.32501220703125 
+                        a 16 16 0 0 1 11 5 
+                        l 77 77 
+                        a 16 16 0 0 1 5 11 
+                        v 126 
+                        a 6 6 0 0 1 -6 6 
+                        h -337.32501220703125 
+                        a 6 6 0 0 1 -6 -6 
+                        z"
+                            fill="#181c2e"
+                      ></path>
+                    </svg>
+    
+                    <!-- // for the content part of the card  -->
+                    <div class="flex flex-col p-7 gap-4">
+                        <h3 class="font-mullish font-bold text-white leading-5 text-[1.375rem] z-50 ">
+                            Current Account
+                        </h3>
+    
+                        <p class="font-mullish text-grayText mt-6 z-50">
+                            Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                        </p>
+    
+                        <!-- //know more wala part le liye container div  -->
+                        <div class="z-50 pt-7">
+                            <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 2  -->
+                <div class="relative w-[32%] cursor-pointer ">
+                    <!-- image present at top right corner  -->
+                    <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+    
+                    <!-- for the border like part which is cut from top right  -->
+                    <svg
+                            viewBox="0 0 349.32501220703125 225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none"
+                            class="stroke-1 stroke-[#818597] h-full w-full absolute transition-all duration-200 "
+                            style="stroke-opacity: 0.60" 
+                             >
+                      <path
+                            d="m 0 6 
+                        a 6 6 0 0 1 6 -6 
+                        h 250.32501220703125 
+                        a 16 16 0 0 1 11 5 
+                        l 77 77 
+                        a 16 16 0 0 1 5 11 
+                        v 126 
+                        a 6 6 0 0 1 -6 6 
+                        h -337.32501220703125 
+                        a 6 6 0 0 1 -6 -6 
+                        z"
+                            fill="#181c2e"
+                      ></path>
+                    </svg>
+    
+                    <!-- // for the content part of the card  -->
+                    <div class="flex flex-col p-7 gap-4">
+                        <h3 class="font-mullish font-bold text-white leading-5 text-[1.375rem] z-50 ">
+                            Current Account
+                        </h3>
+    
+                        <p class="font-mullish text-grayText mt-6 z-50">
+                            Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                        </p>
+    
+                        <!-- //know more wala part le liye container div  -->
+                        <div class="z-50 pt-7">
+                            <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="relative w-[32%] cursor-pointer ">
+                    <!-- image present at top right corner  -->
+                    <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
+    
+                    <!-- for the border like part which is cut from top right  -->
+                    <svg
+                            viewBox="0 0 349.32501220703125 225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none"
+                            class="stroke-1 stroke-[#818597] h-full w-full absolute transition-all duration-200 "
+                            style="stroke-opacity: 0.60" 
+                             >
+                      <path
+                            d="m 0 6 
+                        a 6 6 0 0 1 6 -6 
+                        h 250.32501220703125 
+                        a 16 16 0 0 1 11 5 
+                        l 77 77 
+                        a 16 16 0 0 1 5 11 
+                        v 126 
+                        a 6 6 0 0 1 -6 6 
+                        h -337.32501220703125 
+                        a 6 6 0 0 1 -6 -6 
+                        z"
+                            fill="#181c2e"
+                      ></path>
+                    </svg>
+    
+                    <!-- // for the content part of the card  -->
+                    <div class="flex flex-col p-7 gap-4">
+                        <h3 class="font-mullish font-bold text-white leading-5 text-[1.375rem] z-50 ">
+                            Current Account
+                        </h3>
+    
+                        <p class="font-mullish text-grayText mt-6 z-50">
+                            Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                        </p>
+    
+                        <!-- //know more wala part le liye container div  -->
+                        <div class="z-50 pt-7">
+                            <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+
+             <!-- //box3 - check out demo  -->
+              <div class="border border-slate-700 rounded-md flex items-center justify-between mt-16 gap-y-6 p-8">
+                <p class="font-mullish text-white text-xl">Check out the live demo to learn how RazorpayX works. <span class="font-bold">No sign-up required!</span> </p>
+
+                <button
+                            class="relative bg-lightBlue flex items-center 
+                            justify-start text-white py-[14px] px-[18px] md:pr-[90px] rounded-md
+                             font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
+                                Check out the demo
+
+                                <!-- // to get the green effect in sign up button , the green effect is nothing but a div with bg color green and skewed to some degree  -->
+                                <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] 
+                                flex justify-center items-center">
+
+                                    <!--arrow-->
+                                        <!-- see now inside the skewed green div we have an arrow , when we put the svg of the arrow , the arrow will also get skewed by the same degree as the above div got skewed(+20 deg) . therefore to make the arrow normal , skew the arrow in opposite direction ,i.e., -20deg  -->
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    focusable="false"
+                                    class="w-[20px] h-[20px] -skew-x-[20deg] "
+                                  >
+                                    <path
+                                      fill="currentColor"
+                                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                </button>
+              </div>
+        </div>
+      </section>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
 </body>
