@@ -6,6 +6,13 @@
     <title>Razorpay</title>
     <link rel="stylesheet" href="./main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .corefeaturesection{
+            background-size: 100% 100%;
+            padding-top: 12rem;
+            padding-bottom: 12rem;
+        }
+    </style>
 </head>
 <!-- since in the hero section the lower bottom triangular part is taking 101% therefore we r getting scroll in x-axis also, so to stop it we do overflow-x-hidden  -->
 <body class="w-[100%] overflow-x-hidden">
@@ -724,13 +731,13 @@
       <!-- this section contains 2 dotted images floating at the very top of this section  -->
       <!-- then, 6cards  -->
       <section class="bg-white relative ">
-        <div class="w-[1040px] mx-auto relative pt-4">
+        <div class="w-[1080px] mx-auto relative pt-4">
             <!-- 2 dotted images floating  -->
-            <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] left-[300px] -top-[6rem] -z-10">
-            <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] right-[3.5rem] -top-[6rem] -z-10">
+            <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] left-[300px] -top-[6rem] z-10">
+            <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] right-[3.5rem] -top-[6rem] z-10">
 
             <!-- flex for the 6cards  -->
-            <div class="w-full flex flex-wrap gap-5 relative z-10">
+            <div class="w-full flex flex-wrap gap-5 relative ">
                 <!-- item1 -> it contains only one heading-->
                  <div class="w-[32%] flex justify-center items-center">
                     <h2 class="text-deepBlueHead font-mullish font-extrabold text-4xl leading-[3.375rem]">New in the
@@ -741,7 +748,7 @@
 
                 <!--card1 -> first it contains a backgrd image(thunder like image) which on hover gets filled with color , actually it doesn't get fill with color but on hover another similar image with color filled comes over it  .
                 then , next it contains a image , heading , para and hyperlink-->
-                 <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
+                 <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -752,7 +759,7 @@
                  </div>
                 <!--card2 -->
                 <!-- same card just copy the first one  -->
-                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
+                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -790,6 +797,71 @@
                     <div class="z-50 pt-7">
                         <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
                     </div>
+                 </div>
+            </div>
+        </div>
+      </section>
+
+      <!--New feature - Instant activation features  -->
+      <!-- this section first contains a backgrd image  -->
+       <!-- then it contains a heading, a green small dash and then a paragraph  -->
+        <!-- then at last a flex of 8 cards -->
+         <!-- here we faced an issue that the bg image of blue color for this section was not coming full , so we used internal css and set bg image size as 100% 100% , so the entire bg image comes and then set padding to place the content accordingly -->
+      <section class="bg-[url(/images/core-features-sectionBg.svg)] bg-no-repeat bg-cover bg-center mt-14 corefeaturesection">
+        <div class="w-[1080px] mx-auto relative">
+            <h2 class="font-mullish font-bold text-2xl text-center text-white">Features</h2>
+            <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
+            <p class="font-mullish text-center text-white w-[450px] mx-auto">Empower your business with all the right tools to accept online payments and provide the best customer experience</p>
+
+            <!-- flex for 8 cards  -->
+            <div class="flex flex-wrap w-full gap-5 mt-8">
+                <!-- card 1 -->
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+                 </div>
+
+                 <div class="w-[23%] ">
+                    <img src="./images/instant-activation-icon.svg" alt="">
+                    <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
+                    <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
             </div>
         </div>
