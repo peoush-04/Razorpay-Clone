@@ -12,11 +12,24 @@
             padding-top: 12rem;
             padding-bottom: 12rem;
         }
+        .companiesListAnimation{
+            animation: moveImages 10s linear infinite;
+        }
+        @keyframes moveImages {
+            0%{
+            top:0;
+          }
+          100%{
+            top:-50%;
+          }
+        }
     </style>
 </head>
 <!-- since in the hero section the lower bottom triangular part is taking 101% therefore we r getting scroll in x-axis also, so to stop it we do overflow-x-hidden  -->
-<body class="w-[100%] overflow-x-hidden">
+<body >
 
+    <!-- // good practise of making wrapper class  -->
+    <div class="w-[100%] overflow-x-hidden">
     <!-- / - - - - - / -->
     <!-- Navbar  -->
     <nav class="bg-deepBlue">
@@ -807,7 +820,7 @@
        <!-- then it contains a heading, a green small dash and then a paragraph  -->
         <!-- then at last a flex of 8 cards -->
          <!-- here we faced an issue that the bg image of blue color for this section was not coming full , so we used internal css and set bg image size as 100% 100% , so the entire bg image comes and then set padding to place the content accordingly -->
-      <section class="bg-[url(/images/core-features-sectionBg.svg)] bg-no-repeat bg-cover bg-center mt-14 corefeaturesection">
+      <section class="bg-[url(/images/core-features-sectionBg.svg)] bg-no-repeat bg-cover bg-center mt-14 corefeaturesection relative z-10">
         <div class="w-[1080px] mx-auto relative">
             <h2 class="font-mullish font-bold text-2xl text-center text-white">Features</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
@@ -867,6 +880,42 @@
         </div>
       </section>
 
+      <!-- Join razorpay (image animation) section  -->
+       <!-- this section first contains a top lvl div , under which one more div with some specific width and then one left part and one right part  -->
+        <!-- Note : the above section has blue background image and this section (join razorpay) has a backgrd color , and see carefully how properly this current section ka bg color goes under the above section (Instant activation features) ka backgrd blue image .... VVV -> this is possible using negative top margin (-mt-[px]) , -ve top margin shifts this entire current section upside under the Instant activation features section  -->
+         <!-- Also , note blue backgrd image comes above the bg color of the current section , so keep this current section ka z index less  -->
+          <!-- Note -> z-index doesn't work on static position , so make the sections relative  -->
+      <section class="bg-[#f5f8fe] relative pt-40 pb-12 -mt-[200px] z-0">
+        <div class="w-[1040px] mx-auto relative flex justify-center items-center">
+            <!-- left part -->
+             <div class="flex flex-col relative max-w-[58%]">
+                <h3 class="font-mullish font-bold text-2xl text-deepBlueHead">Join the 50,00,000+ businesses using Razorpay</h3>
+                <div class="w-6 h-1 bg-greenLight  my-4 mb-10"></div>
+                <p class="font-mullish opacity-80">We make it easier for you to focus on building great products while we work on simplifying your payments. Become one of us by joining thousands of our happy users and simplify the online payment experience for your customers.</p>
+                <p class="font-mullish mt-8 opacity-80">Focus on your business while we handle the complexities of payments for you.</p>
+             </div>
+
+             <!-- right part -->
+              <!-- see the right part has a long image which is being animated (moving up) which can be done by 0% - top:0 -->
+              <!-- 100% - top:-50% .   -->
+               <!-- but , also see there is a light gradient on the top and bottom of the image , which can be done by placing 2divs one above img and one below img . keep backgrd of the div as linear-gradient , for the above div make it absolute and keep it at top0 , let the above div take full width 100% of the left container and then set a height for the above div  , do the same for bottom div-->
+             <div class="w-[42%] h-[500px] relative overflow-y-hidden">
+                <!-- //above div  -->
+                <div style="background:linear-gradient(180deg, #f4f8ff, #fff0);" class="absolute top-0 w-[100%] h-[150px] z-50">
+                </div>
+
+                <img src="./images/comanies.png" alt="" class="relative object-cover companiesListAnimation z-0">
+                
+                <!-- //below div  -->
+                <div style="background:linear-gradient(0deg, #f4f8ff, #fff0);" class="absolute bottom-0 w-[100%] h-[150px] z-50">
+
+                </div>
+            </div>
+        </div>
+      </section>
+
+      
+    </div>
       
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
