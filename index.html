@@ -914,10 +914,66 @@
         </div>
       </section>
 
+      <!-- Testimonial section  -->
+       <!-- this section first contains a heading and a green line  -->
+        <!-- after that we have dotted images , we can write the html for the dotted image anywhere inside the parent div since we will position the dotted image using absolute positioning  -->
+         <!-- same for the left and right arrow we will position it using absolute positioning  -->
+        <!-- then we have the main content section which has a left part(image) and right part  -->
+         <!-- after the main content at last we have a div containing 6 dots  -->
+      <section class="relative">
+        <div class="relative w-[1300px] mx-auto py-20">
+            <h2 class="font-mullish font-bold text-2xl text-deepBlueHead text-center">An Experience <br> People Love to Talk About</h2>
+            <div class="w-6 h-1 bg-greenLight mx-auto my-4"></div>
+            <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[200px] top-[8rem] left-[2rem] z-0">
+
+            <!-- left button  -->
+             <!-- see the left button has a div inside it with the same backgrd color , so we use mix-blend-multiply to blend the outer button color and the inside div color  -->
+             <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 left-0 flex justify-center items-center">
+                <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full mix-blend-multiply flex justify-center items-center">
+                    <i class="fa fa-solid fa-angle-left"></i>
+                </div>
+             </button>
+
+             <!-- right button  -->
+             <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute top-1/2 right-0 flex justify-center items-center">
+                <div class="w-[65%] h-[65%] bg-[#f4f8ff] rounded-full mix-blend-multiply flex justify-center items-center">
+                    <i class="fa fa-solid fa-angle-right"></i>
+                </div>
+             </button>
+
+             <!-- main content  -->
+              <div class="max-w-[75%] mx-auto flex flex-row items-center gap-[10rem] my-20 relative z-10">
+                <!-- left image  -->
+                 <img src="./images/testimonial.jpg" alt="" loading="lazy" class="rounded-xl h-[320px] w-[320px]">
+
+                 <!-- right part  -->
+                  <div class="max-w-[45%]">
+                    <img src="./images/quotes.svg" alt="" class="w-[35px] h-[40px] -mb-2">
+                    <p class="font-mullish font-extralight text-3xl opacity-70">Readymade Closed Wallet Solution For Quick Refunds</p>
+                    <a href="" class="text-grayText italic underline">Learn More</a>
+                    <p class="font-mullish font-extrabold text-2xl">Lorem Ipsum</p>
+                    <p class="font-mullish font-medium">CEO, XYZ Engineering Company</p>
+                    <img src="./images/fake-company-logo.png" alt="" class="w-[80px] h-[50px] ">
+                  </div>
+              </div>
+
+              <!-- 6 dots in a row  -->
+              <div class="flex flex-row mx-auto gap-2 w-[10%] ">
+                <div class="w-[10px] h-[10px] bg-gray-300  rounded-full"></div>
+                <div class="w-[10px] h-[10px] bg-lightBlue300 rounded-full"></div>
+                <div class="w-[10px] h-[10px] bg-gray-300 rounded-full"></div>
+                <div class="w-[10px] h-[10px] bg-gray-300 rounded-full"></div>
+                <div class="w-[10px] h-[10px] bg-gray-300 rounded-full"></div>
+                <div class="w-[10px] h-[10px] bg-gray-300 rounded-full"></div>
+              </div>
+        </div>
+      </section>
       
     </div>
       
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" 
+    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4309e5fc3e.js" crossorigin="anonymous"></script>
 </body>
 </html>
