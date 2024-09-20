@@ -6,11 +6,17 @@
     <title>Razorpay</title>
     <link rel="stylesheet" href="./main.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
         .corefeaturesection{
             background-size: 100% 100%;
             padding-top: 12rem;
             padding-bottom: 12rem;
+        }
+        .lastSection{
+          background-size: 100% 100%;
+          padding-top: 7rem;
+          padding-bottom: 8rem;
         }
         .companiesListAnimation{
             animation: moveImages 10s linear infinite;
@@ -969,11 +975,64 @@
         </div>
       </section>
       
+      <!-- last section  -->
+       <!-- this section contains first contains a backgrd img -->
+       <!-- then a left section and a right section   -->
+       <section class="bg-[url(/images/CTABg.svg)] bg-cover bg-no-repeat bg-center relative lastSection">
+        <div class="relative max-w-[1080px] mx-auto flex flex-row justify-between items-center">
+            <!-- left part  -->
+             <div class="w-[60%] flex flex-col gap-6">
+                <h2 class="font-mullish font-bold text-2xl text-white">Supercharge your business with Razorpay</h2>
+                <div class="w-6 h-1 bg-greenLight"></div>
+                <p class="font-mullish text-white">Sign up now to experience the future of payments and offer <br> your customers the best checkout experience.</p>
+                <ul class="flex flex-row gap-x-10 flex-wrap">
+                    <li class="font-mullish text-white flex flex-row">
+                        <i data-feather="check" class="text-greenLight"></i>
+                        <span>Quick Onboarding</span>
+                    </li>
+                    <li class="font-mullish text-white flex flex-row">
+                        <i data-feather="check" class="text-greenLight"></i>
+                        <span>Access to entire product suite</span>
+                    </li>
+                    <li class="font-mullish text-white flex flex-row">
+                        <i data-feather="check" class="text-greenLight"></i>
+                        <span>API access</span>
+                    </li>
+                    <li class="font-mullish text-white flex flex-row">
+                        <i data-feather="check" class="text-greenLight"></i>
+                        <span>24x7 support</span>
+                    </li>
+                </ul>
+                <button
+        class="min-w-[32px] font-mullish text-sm font-bold bg-white text-lightBlue300 border flex
+        rounded-sm items-center hover:text-lightBlue500 transition-all duration-200 py-3 px-4 place-self-start">
+          Sign Up
+          <svg
+          viewBox="0 0 24 24"
+          focusable="false"
+          class="w-[14px] h-[14px] ml-3"
+        >
+          <path
+            fill="currentColor"
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+          ></path>
+        </svg>
+        </button>
+             </div>
+
+             <!-- right part  -->
+              <img src="./images/ctaImg.svg" alt="" class="w-[240px] h-[282px] ">
+        </div>
+       </section>
+    
     </div>
       
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://kit.fontawesome.com/58a810656e.js" 
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4309e5fc3e.js" crossorigin="anonymous"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 </html>
