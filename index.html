@@ -29,8 +29,29 @@
             top:-50%;
           }
         }
+          @media only screen and (min-width:1330px) {
+            .feature1boxes{
+              width: 32%;
+            }
+          }
+          @media only screen and (min-width:1428px) {
+            .featuresection2flex{
+              width: 32%;
+            }
+          }
+          @media only screen and (min-width:1250px) {
+            .razorpaySuiteCorporateCards{
+              width: 32%;
+            }
+          }
     </style>
 </head>
+<!-- IMPORTANT POINTS : -->
+  <!-- 1 -> for buttons normally use width:fit (w-fit) means it will occupy only required space , and for smaller screens keep button's width as full (w-full) -->
+   <!-- 2 -> normally for div's width use % like w-[80%] and not static value like w-[1080px]  -->
+  <!-- 3 -> for large/normal screen let the div's width take 30%,33%,40% or x% but when screen size decreases then dont keep the div's width the same percentage . keep 30%,33% or x% only for large screen (lg:w-[30%]) -->
+
+
 <!-- since in the hero section the lower bottom triangular part is taking 101% therefore we r getting scroll in x-axis also, so to stop it we do overflow-x-hidden  -->
 <body >
 
@@ -40,7 +61,7 @@
     <!-- Navbar  -->
     <nav class="bg-deepBlue">
         <!-- // margin: 0 auto is written as mx-auto in tailwind  -->
-        <div class="w-[1080px] mx-auto flex items-center justify-between">
+        <div class="w-[90%] mx-auto flex items-center justify-between">
 
             <!-- //razorpay logo  -->
             <a href="/" class="cursor-pointer py-7 pr-7">
@@ -48,7 +69,8 @@
             </a>
 
             <!-- the unorderlist contains payments,banking,payroll,support,resources etc  -->
-            <ul class="flex gap-6">
+             <!-- when screen size is large then show all list items as a flex , and when screen size is less than large then hide the list items  or can use opacity-0 lg:opacity-100 -->
+            <ul class="hidden lg:flex gap-6 relative flex-row">
                 <!-- VVI -> explaination of group class  -->
 
                 <!-- see in the website carefully on hovering over the list item (li) we get a underline below it , so basically a list irem contains a link <a> Payemnts </a> and a div below it for underline  -->
@@ -94,7 +116,7 @@
             </ul>
 
             <div class="flex gap-6">
-                <img src="./images/india-flag.svg" alt="error" width="28px" height="28px">
+                <img src="./images/india-flag.svg" alt="error" width="28px" height="28px" >
                 
                 <button class="text-white bg-deepBlue font-mullish border-lightBlue border rounded-sm py-3 px-5 text-sm font-bold">Log in</button>
 
@@ -112,15 +134,20 @@
         
         <!-- We can write w- 83% as w-10/12 also, 
         see we want width of this div around 83% , so to write 83% in tailwind do w:10/12 , since 10/12 = 83%  -->
-        <div class="w-[75%] flex flex-row mx-auto justify-evenly items-center pt-3">
+
+        <!-- for large screen (above 1024px) keep it as flex row , and for any screen size below 1024px keep it as flex col  -->
+        <div class="w-[75%] flex flex-col lg:flex-row mx-auto justify-evenly items-center pt-3">
             
             <!-- left part  -->
-            <div class="flex flex-col gap-6 w-[33%]">
+             <!-- normally when large take width as 33% of the entire screen but when screen size less than large then dont apply 33% width instead take the entire/full width  -->
+
+             <!-- when the screen is large then let it take 33% of the parent width , but when screen screen smaller then take the entire/full wiidth  -->
+            <div class="flex flex-col gap-6 lg:w-[33%]">
                 <h1 class="font-mullish font-bold text-4xl text-white">Power your finance, grow your business</h1>
                 <div class="w-6 h-1 bg-greenLight"></div>
                 <p class="font-mullish text-[18px] leading-7 text-white opacity-70">Accept payments from customers. Automate payouts to vendors &
                     employees. Never run out of working capital.</p>
-                <button class="bg-lightBlue text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500 p-3 w-[40%]">Sign Up Now</button>
+                <button class="bg-lightBlue text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500 p-3 w-fit">Sign Up Now</button>
             </div>
 
             <!-- right part -->
@@ -147,15 +174,19 @@
         <img src="./images/feature-section1-dottedrows.png" alt="error" loading="lazy" width="233" height="167"
             class="absolute top-[3rem] right-0 rotate-180">
 
-        <div class="relative w-[1040px] mx-auto pt-4">
+        <div class="relative w-[80%] mx-auto pt-4">
             <!-- --heading--  -->
-            <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold">Accept Payments with Razorpay Payment Suite</h2>
+            <!-- for large screen we have "accept payments ..." wala heading so keep it md:block means visible for screen size greater than 'md' and for screen size less than md make it hidden and make "exploring razorpay .." wala heading as visible  -->
+
+            <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold hidden md:block">Accept Payments with Razorpay Payment Suite</h2>
+
+            <h2 class="font-mullish text-center text-2xl leading-[1.2] font-extrabold md:hidden">Exploring Razorpay Payment Site</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto mt-3 mb-6"></div>
 
             <!-- content box  -->
-            <div class="relative w-[100%] flex rounded-md p-10 py-12 overflow-y-hidden border rounded-md"> 
+            <div class="relative w-[100%] flex items-center rounded-md p-10 py-12 overflow-y-hidden border"> 
                 <!-- left section  -->
-                <div class="flex flex-col w-[50%] gap-10">
+                <div class="flex flex-col md:w-[50%] gap-10">
                     <h3 class="font-mullish text-[28px] leading-10 font-bold ">Supercharge your business with the all‑powerful
                         <span class="text-lightBlue">Payment Gateway</span></h3>
                     
@@ -187,30 +218,31 @@
                     </ul>
 
                     <!-- for button and hyperlink  -->
-                    <div class="flex items-center gap-4">
-                        <button class="bg-lightBlue  text-white p-4 rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500">Sign Up Now</button>
+                    <div class="flex flex-col md:flex-row items-center gap-4">
+                        <button class="bg-lightBlue w-full md:w-fit  text-white p-4 rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-500">Sign Up Now</button>
                         <div class="flex items-center">
                             <a href="#" class="text-lightBlue500 font-mullish font-bold hover:text-gray-600 transition-all duration-500">Know More</a>
                             <i class="fa fa-solid fa-greater-than w-5 h-4 text-lightBlue"></i>
                         </div>     
                     </div>
 
-                    <!-- this image is overlapping/floating in the content section so make it absolute and set left right top etc  -->
-                    <div class="absolute right-0 bottom-0 w-[550px] ">
-                        <img src="./images/payment-suite.png" alt="error" class="w-full object-fill">
-                    </div>
+                    
                 </div>
-
+                <!-- this image is overlapping/floating in the content section so make it absolute and set left right top etc  -->
+                <div >
+                  <img src="./images/payment-suite.png" alt="error" class="absolute right-0 bottom-0 hidden md:block lg:block md:max-w-[400px] lg:max-w-[550px] ">
+              </div>
             </div>
         </div>
 
         <!-- 6 cards div under the feature section  -->
-         <div class="w-[1040px] mx-auto flex flex-wrap gap-5 pt-14">
+         <div class="w-[75%] mx-auto flex flex-wrap gap-5 pt-14">
             
             <!-- //Box - 1  -->
              <!-- here see in each box , the difficult part is the border which is cut from top right but actually it is not border , it is simply a svg image copy pasted  -->
               <!-- then the box has a small image at top right and then the content part  -->
-            <div class="relative w-[32%] cursor-pointer ">
+               <!-- feature1boxes is the class given to add specific media query that is when screen sixe above 1330px then keep width 32% , when screen size between md and 1330px then flex cards width is 45% and if size lesser than md then w-full  -->
+            <div class="relative w-full md:w-[45%]  cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -255,7 +287,7 @@
                 </div>
             </div>
 
-            <div class="relative w-[32%] cursor-pointer ">
+            <div class="relative w-full md:w-[45%] cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -300,7 +332,7 @@
                 </div>
             </div>
 
-            <div class="relative w-[32%] cursor-pointer ">
+            <div class="relative w-full md:w-[45%]  cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -345,7 +377,7 @@
                 </div>
             </div>
 
-            <div class="relative w-[32%] cursor-pointer ">
+            <div class="relative w-full md:w-[45%] cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -390,7 +422,7 @@
                 </div>
             </div>
 
-            <div class="relative w-[32%] cursor-pointer ">
+            <div class="relative w-full md:w-[45%]  cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -435,7 +467,7 @@
                 </div>
             </div>
 
-            <div class="relative w-[32%] cursor-pointer ">
+            <div class="relative w-full md:w-[45%] cursor-pointer feature1boxes">
                 <!-- image present at top right corner  -->
                 <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
 
@@ -488,7 +520,7 @@
       <section class="bg-[url(./images/feature-section-2BG.svg)] bg-no-repeat bg-cover pt-[15rem] pb-[501px] mt-16 ">
         <!-- this div contains all the three boxes  -->
          <!-- required this div since we want a width of 1040px for all the three boxes below  -->
-        <div class="w-[1040px] mx-auto relative pt-4 flex flex-col">
+        <div class="w-[70%] mx-auto relative pt-4 flex flex-col">
             
             <!-- //box1 - business banking detail box  -->
             <div class="relative w-full">
@@ -502,7 +534,7 @@
                 <!-- content box  -->
                 <div class="relative w-[100%] flex rounded-md p-10 py-12 overflow-y-hidden border border-slate-700 z-[10] bg-[#181c2e]"> 
                     <!-- left section  -->
-                    <div class="flex flex-col w-[52%] gap-14">
+                    <div class="flex flex-col w-full md:w-[45%] gap-14">
                         <h3 class="font-mullish text-[28px] leading-10 font-bold text-white">Manage your company’s finances with 
                             <img src="./images/razorpayX.svg" alt="error" loading="lazy" width="168px" height="32px" class="inline">
                             <span class="text-greenLight">Business Banking</span></h3>
@@ -527,17 +559,17 @@
                         </ul>
     
                         <!-- for button and hyperlink  -->
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4 flex-col md:flex-row">
                             <!-- button  -->
                             <button
-                            class="relative bg-lightBlue flex items-center 
-                            justify-start text-white py-[14px] px-[18px] md:pr-[90px] rounded-md
+                            class="relative w-full md:w-fit bg-lightBlue flex items-center place-content-center
+                            md:justify-start text-white py-[14px] px-[18px] md:pr-[90px] rounded-md
                              font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
                                 Sign Up
 
                                 <!-- // to get the green effect in sign up button , the green effect is nothing but a div with bg color green and skewed to some degree  -->
                                 <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] 
-                                flex justify-center items-center">
+                                flex justify-center items-center ">
 
                                     <!--arrow-->
                                         <!-- see now inside the skewed green div we have an arrow , when we put the svg of the arrow , the arrow will also get skewed by the same degree as the above div got skewed(+20 deg) . therefore to make the arrow normal , skew the arrow in opposite direction ,i.e., -20deg  -->
@@ -561,7 +593,7 @@
                         </div>
     
                         <!-- this image is overlapping/floating in the content section so make it absolute and set left right top etc  -->
-                        <div class="absolute right-0 bottom-0 w-[550px] ">
+                        <div class="absolute right-0 bottom-0 hidden md:block md:w-[300px] lg:w-[460px] ">
                             <img src="./images/buisness-banking.png" alt="error" class="w-full object-fill">
                         </div>
                     </div>
@@ -570,10 +602,10 @@
             </div>
 
             <!-- //box2 - 3cards  -->
-             <div class="mx-auto flex flex-wrap gap-5 pt-14">
+             <div class="flex flex-wrap gap-5 pt-14">
 
                 <!-- // card - 1 -->
-                <div class="relative w-[32%] cursor-pointer ">
+                <div class="relative w-full md:w-[45%] featuresection2flex cursor-pointer ">
                     <!-- image present at top right corner  -->
                     <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
     
@@ -620,7 +652,7 @@
                 </div>
 
                 <!-- card 2  -->
-                <div class="relative w-[32%] cursor-pointer ">
+                <div class="relative w-full md:w-[45%] featuresection2flex cursor-pointer ">
                     <!-- image present at top right corner  -->
                     <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
     
@@ -666,7 +698,7 @@
                 </div>
 
                 <!-- card 3 -->
-                <div class="relative w-[32%] cursor-pointer ">
+                <div class="relative w-full md:w-[45%] featuresection2flex cursor-pointer ">
                     <!-- image present at top right corner  -->
                     <img src="./images/payment-link-icon.svg" alt="" class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-0 transition-all duration-500">
     
@@ -714,7 +746,7 @@
              </div>
 
              <!-- //box3 - check out demo  -->
-              <div class="border border-slate-700 rounded-md flex items-center justify-between mt-16 gap-y-6 p-8">
+              <div class="border border-slate-700 rounded-md hidden  md:flex items-center justify-between mt-16 gap-y-6 p-8 flex-col lg:flex-row">
                 <p class="font-mullish text-white text-xl">Check out the live demo to learn how RazorpayX works. <span class="font-bold">No sign-up required!</span> </p>
 
                 <button
@@ -750,15 +782,15 @@
       <!-- this section contains 2 dotted images floating at the very top of this section  -->
       <!-- then, 6cards  -->
       <section class="bg-white relative ">
-        <div class="w-[1080px] mx-auto relative pt-4">
+        <div class="w-[80%] mx-auto relative pt-4">
             <!-- 2 dotted images floating  -->
             <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] left-[300px] -top-[6rem] z-10">
             <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] right-[3.5rem] -top-[6rem] z-10">
 
             <!-- flex for the 6cards  -->
-            <div class="w-full flex flex-wrap gap-5 relative ">
+            <div class="w-full flex flex-wrap gap-5 relative z-20">
                 <!-- item1 -> it contains only one heading-->
-                 <div class="w-[32%] flex justify-center items-center">
+                 <div class="w-full md:w-[45%] razorpaySuiteCorporateCards flex justify-center items-center">
                     <h2 class="text-deepBlueHead font-mullish font-extrabold text-4xl leading-[3.375rem]">New in the
                         <span class="text-lightBlue500">Razorpay</span>
                         Product Suite
@@ -767,7 +799,7 @@
 
                 <!--card1 -> first it contains a backgrd image(thunder like image) which on hover gets filled with color , actually it doesn't get fill with color but on hover another similar image with color filled comes over it  .
                 then , next it contains a image , heading , para and hyperlink-->
-                 <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
+                 <div class="w-full md:w-[45%] razorpaySuiteCorporateCards bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -778,7 +810,7 @@
                  </div>
                 <!--card2 -->
                 <!-- same card just copy the first one  -->
-                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
+                <div class="w-full md:w-[45%] razorpaySuiteCorporateCards bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10 bg-white z-20">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -788,7 +820,7 @@
                     </div>
                  </div>
                 <!--card3 -->
-                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
+                <div class="w-full md:w-[45%] razorpaySuiteCorporateCards bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -798,7 +830,7 @@
                     </div>
                  </div>
                 <!--card4 -->
-                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
+                <div class="w-full md:w-[45%] razorpaySuiteCorporateCards bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -808,7 +840,7 @@
                     </div>
                  </div>
                 <!--card5 -->
-                <div class="w-[32%] bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
+                <div class="w-full md:w-[45%] razorpaySuiteCorporateCards bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat cursor-pointer hover:scale-105 transition-all duration-400 hover:bg-[url(/images/instant-settlement-bghover.svg)] p-10">
                     <img src="./images/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Corporate Cards</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Simplify your recurring, international and team expenses with savings on every spend. Save upto 10 lacs every month.</p>
@@ -827,7 +859,7 @@
         <!-- then at last a flex of 8 cards -->
          <!-- here we faced an issue that the bg image of blue color for this section was not coming full , so we used internal css and set bg image size as 100% 100% , so the entire bg image comes and then set padding to place the content accordingly -->
       <section class="bg-[url(/images/core-features-sectionBg.svg)] bg-no-repeat bg-cover bg-center mt-14 corefeaturesection relative z-10">
-        <div class="w-[1080px] mx-auto relative">
+        <div class="w-[80%] mx-auto relative">
             <h2 class="font-mullish font-bold text-2xl text-center text-white">Features</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
             <p class="font-mullish text-center text-white w-[450px] mx-auto">Empower your business with all the right tools to accept online payments and provide the best customer experience</p>
@@ -835,49 +867,49 @@
             <!-- flex for 8 cards  -->
             <div class="flex flex-wrap w-full gap-5 mt-8">
                 <!-- card 1 -->
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
                  </div>
 
-                 <div class="w-[23%] ">
+                 <div class="w-full md:w-[30%] lg:w-[23%] ">
                     <img src="./images/instant-activation-icon.svg" alt="">
                     <h3 class="font-mullish text-white text-lg font-bold my-4">Instant Activation</h3>
                     <p class="font-mullish text-white opacity-80">Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
@@ -892,7 +924,7 @@
          <!-- Also , note blue backgrd image comes above the bg color of the current section , so keep this current section ka z index less  -->
           <!-- Note -> z-index doesn't work on static position , so make the sections relative  -->
       <section class="bg-[#f5f8fe] relative pt-40 pb-12 -mt-[200px] z-0">
-        <div class="w-[1040px] mx-auto relative flex justify-center items-center">
+        <div class="w-[80%] mx-auto relative flex justify-center items-center flex-col md:flex-row">
             <!-- left part -->
              <div class="flex flex-col relative max-w-[58%]">
                 <h3 class="font-mullish font-bold text-2xl text-deepBlueHead">Join the 50,00,000+ businesses using Razorpay</h3>
@@ -927,7 +959,7 @@
         <!-- then we have the main content section which has a left part(image) and right part  -->
          <!-- after the main content at last we have a div containing 6 dots  -->
       <section class="relative">
-        <div class="relative w-[1300px] mx-auto py-20">
+        <div class="relative w-[82%] mx-auto py-20">
             <h2 class="font-mullish font-bold text-2xl text-deepBlueHead text-center">An Experience <br> People Love to Talk About</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto my-4"></div>
             <img src="./images/feature-section1-dottedrows.png" alt="" class="absolute w-[200px] top-[8rem] left-[2rem] z-0">
@@ -948,7 +980,7 @@
              </button>
 
              <!-- main content  -->
-              <div class="max-w-[75%] mx-auto flex flex-row items-center gap-[10rem] my-20 relative z-10">
+              <div class="max-w-[75%] mx-auto flex flex-col lg:flex-row items-center gap-[10rem] my-20 relative z-10">
                 <!-- left image  -->
                  <img src="./images/testimonial.jpg" alt="" loading="lazy" class="rounded-xl h-[320px] w-[320px]">
 
@@ -981,7 +1013,7 @@
        <section class="bg-[url(/images/CTABg.svg)] bg-cover bg-no-repeat bg-center relative lastSection z-10">
         <div class="relative max-w-[1080px] mx-auto flex flex-row justify-between items-center">
             <!-- left part  -->
-             <div class="w-[60%] flex flex-col gap-6">
+             <div class="w-[60%] mx-auto flex flex-col gap-6 pt-20 pb-16">
                 <h2 class="font-mullish font-bold text-2xl text-white">Supercharge your business with Razorpay</h2>
                 <div class="w-6 h-1 bg-greenLight"></div>
                 <p class="font-mullish text-white">Sign up now to experience the future of payments and offer <br> your customers the best checkout experience.</p>
@@ -1021,15 +1053,15 @@
              </div>
 
              <!-- right part  -->
-              <img src="./images/ctaImg.svg" alt="" class="w-[240px] h-[282px] ">
+              <img src="./images/ctaImg.svg" alt="" class="w-[240px] h-[282px] hidden lg:block">
         </div>
        </section>
     
        <!-- footer  -->
        <footer style="background: linear-gradient(to right, #eef9fe, #edf7ff)" class="relative -mt-[215px] z-0">
-        <div class="relative w-[1080px] mx-auto pt-[250px] flex flex-row justify-between">
+        <div class="relative w-[80%] mx-auto pt-[250px] flex flex-row flex-wrap justify-between gap-x-6">
             <!-- left part  -->
-            <div class="max-w-[23%] flex flex-col">
+            <div class="md:w-[40%] lg:max-w-[23%] flex flex-col">
                 <img src="./images/logo-dark.svg" alt="" loading="lazy"
                 width="120px"
                 height="24px">
@@ -1075,9 +1107,9 @@
             </div>
 
             <!-- right part  --> 
-            <div class="w-[65%] relative flex flex-row justify-between">
+            <!-- <div class="w-[65%] relative flex flex-row justify-between"> -->
                 <!-- 1st column  -->
-                 <div class="flex flex-col gap-y-3">
+                 <div class="md:w-[40%] lg:max-w-[23%] flex flex-col gap-y-3">
                     <!-- banking plus  -->
                     <div>
                         <p class="font-mullish uppercase font-bold text-gray2 mb-1">BANKING PLUS</p>
@@ -1270,7 +1302,7 @@
                  </div>
 
                  <!-- 2nd column  -->
-                 <div class="flex flex-col gap-y-3">
+                 <div class="md:w-[40%] lg:max-w-[23%] flex flex-col gap-y-3">
                     <div>
                       <p class="font-mullish uppercase font-bold text-gray2 mb-1">
                         ACCEPT PAYMENTS
@@ -1469,7 +1501,7 @@
                   </div>
 
                   <!-- 3rd column  -->
-                  <div class="w-[35%] flex flex-col">
+                  <div class="md:w-[40%] lg:w-[25%] flex flex-col">
                     <!-- COMPANY  -->
                     <div>
                         <p class="font-mullish uppercase font-bold text-gray2 mb-1">
@@ -1634,7 +1666,7 @@
                         </div>
                      </div>
                   </div>
-            </div>
+            <!-- </div> -->
         </div>
        </footer>
 
